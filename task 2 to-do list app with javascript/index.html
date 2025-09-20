@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do List — Bereket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>To-Do List</h1>
+      <p class="subtitle">Add, edit, complete and delete tasks — saved in your browser.</p>
+    </header>
+
+    <section class="add-box">
+      <form id="taskForm" aria-label="Add task form">
+        <input id="taskInput" autocomplete="off" placeholder="Add a new task and press Enter" maxlength="150" />
+        <button type="submit" id="addBtn">Add</button>
+      </form>
+    </section>
+
+    <section class="filters">
+      <div class="stats" id="stats">0 tasks</div>
+      <div class="filter-buttons">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+      <button id="clearCompleted" class="ghost">Clear completed</button>
+    </section>
+
+    <section id="listSection">
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Built by Bereket Kefeni • Local browser storage (no servers)</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
